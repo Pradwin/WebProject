@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,48 +8,174 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        background-color: rgb(81, 21, 138);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: 600px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    nav ul li {
+        border-bottom: 2px solid transparent;
+        transition: 0.1s ease-in;
+    }
+
+    nav ul li:hover {
+        border-bottom: 2px solid white;
+        transition: 0.1s ease-in;
+    }
+
+    section {
+        padding: 50px;
+    }
+
+    section h2 {
+        margin-top: 0;
+    }
+
+    form label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="time"],
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    form input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+/* Your existing CSS styles */
+
+footer {
+    background-color: rgb(81, 21, 138);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+</style>
+
 <body>
-     <header>
-      <nav class="container">
-        <div class="logo">Ambulance</div>
-        <ul>
-          <a href="home.html"><li>Home</li></a>
-          <a href="https://maps.app.goo.gl/hmQvw8DyJ4egEP3k8/"><li>Map</li></a>
-          <a href="contact.html"><li>Contact us</li></a>
-          <a href="about.html"><li>About us</li></a>
-        </ul>
-      </nav>
+    <header>
+        <nav class="container">
+            <div class="logo">Ambulance</div>
+            <ul>
+                <a href="https://maps.app.goo.gl/hmQvw8DyJ4egEP3k8/">
+                    <li>Map</li>
+                </a>
+                <a href="contact.html">
+                    <li>Contact us</li>
+                </a>
+                <a href="about.html">
+                    <li>About us</li>
+                </a>
+            </ul>
+        </nav>
     </header>
-    <main>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, iure vero in consequuntur aliquam autem quod inventore quis dolorem accusamus error soluta ad dignissimos voluptate enim distinctio impedit optio. Cum nisi in inventore aliquam sint iusto nostrum eius sunt aliquid asperiores assumenda earum, at exercitationem explicabo dolorum consequuntur corrupti alias quaerat excepturi. Maxime ea aliquam, sed delectus, molestiae sequi quidem voluptate in hic blanditiis quis eveniet provident rem sint quaerat.
-    </main>
-     <footer>
-        <section class="footer-upper">
-            <div class="container">
-                <div class="footer-links">
-                    <h4>Shop and learn</h4>
-                    <ul>
-                        <li>Music</li>
-                        <li>Movies</li>
-                        <li>Shows</li>
-                        <li>Apps</li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Education and Business</h4>
-                    <ul>
-                        <li>Orange Education</li>
-                        <li>Shops and job</li>
-                        <li>Jobs</li>
-                        <li>Shop for college</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="footer-lower">
-            <p>&#169 Copyright of Rathan</p>
-        </section>
-    </footer>
-    
+    <section id="booking">
+        <h2>Book an Ambulance</h2>
+        <form>
+            <label for="pickup">Pickup Location:</label>
+            <input type="text" id="pickup" name="pickup" required>
+
+            <label for="dropoff">Drop-off Location:</label>
+            <input type="text" id="dropoff" name="dropoff" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="requirements">Special Requirements:</label>
+            <textarea id="requirements" name="requirements"></textarea>
+
+            <input type="submit" value="Book Now">
+        </form>
+    </section>
+    <footer>
+        <div class="footer-content">
+          <p>&copy; 2023 Ambulance Booking. All rights reserved.</p>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </footer>
+
 </body>
+
 </html>

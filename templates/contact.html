@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        scroll-behavior: smooth;
+    }
+
+
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        background-color: rgb(81, 21, 138);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: 600px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li {
+        border-bottom: 2px solid transparent;
+        transition: 0.1s ease-in;
+    }
+
+    nav ul li:hover {
+        border-bottom: 2px solid white;
+        transition: 0.1s ease-in;
+    }
+
+    section {
+        padding: 50px;
+    }
+
+    section h2 {
+        margin-top: 0;
+    }
+
+    form label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    form input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    /* Your existing CSS styles */
+
+    footer {
+        background-color: rgb(81, 21, 138);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-content p {
+        margin: 0;
+    }
+
+    .footer-content a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    .footer-content a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Ambulance</div>
+            <ul>
+                <a href="https://maps.app.goo.gl/hmQvw8DyJ4egEP3k8/">
+                    <li>Map</li>
+                </a>
+                <a href="contact.html">
+                    <li>Contact us</li>
+                </a>
+                <a href="about.html">
+                    <li>About us</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, please feel free to reach out to us:</p>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Ambulance Booking. All rights reserved.</p>
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+</body>
+
+</html>
