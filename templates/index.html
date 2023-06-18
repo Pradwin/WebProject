@@ -98,35 +98,42 @@
         cursor: pointer;
     }
 
-/* Your existing CSS styles */
+    /* Your existing CSS styles */
 
-footer {
-    background-color: rgb(81, 21, 138);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
+    footer {
+        background-color: rgb(81, 21, 138);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
 
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.footer-content p {
-  margin: 0;
-}
+    p {
+        margin: 0;
+    }
 
-.footer-content a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 10px;
-}
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px 0;
+    }
 
-.footer-content a:hover {
-  text-decoration: underline;
-}
+    .footer-content a {
+        color: #fff;
+        text-decoration: none;
+        margin: 3px 0;
+    }
 
+    .footer-content a:hover {
+        text-decoration: underline;
+    }
 </style>
 
 <body>
@@ -137,10 +144,10 @@ footer {
                 <a href="https://maps.app.goo.gl/hmQvw8DyJ4egEP3k8/">
                     <li>Map</li>
                 </a>
-                <a href="contact">
+                <a href="contact.html">
                     <li>Contact us</li>
                 </a>
-                <a href="about">
+                <a href="about.html">
                     <li>About us</li>
                 </a>
             </ul>
@@ -168,14 +175,13 @@ footer {
         </form>
     </section>
     <footer>
+        <p>&copy; 2023 Ambulance Booking. All rights reserved.</p>
         <div class="footer-content">
-          <p>&copy; 2023 Ambulance Booking. All rights reserved.</p>
-          <a href="terms.html">Terms of Service</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="contact.html">Contact Us</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="contact.html">Contact Us</a>
         </div>
-      </footer>
-
+    </footer>
 </body>
 
 </html>
