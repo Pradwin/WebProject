@@ -131,15 +131,19 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Ambulance</div>
+            <div class="logo">
+                <a href="/">
+                    <img src="/static/ambulenceLogo.png" height="40px" alt="Logo">
+                </a>
+            </div>
             <ul>
                 <a href="https://maps.app.goo.gl/hmQvw8DyJ4egEP3k8/">
                     <li>Map</li>
                 </a>
-                <a href="index.html">
+                <!-- <a href="/">
                     <li>Home</li>
-                </a>
-                <a href="about.html">
+                </a> -->
+                <a href="/about">
                     <li>About us</li>
                 </a>
             </ul>
@@ -149,7 +153,7 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <p>If you have any questions or feedback, please feel free to reach out to us:</p>
-            <form>
+            <form action="submitContact" method="post" enctype="multipart/form-data">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -157,7 +161,7 @@
                 <input type="email" id="email" name="email" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="msg" required></textarea>
 
                 <input type="submit" value="Send Message">
             </form>

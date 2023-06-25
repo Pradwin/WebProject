@@ -139,15 +139,19 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Ambulance</div>
+            <div class="logo">
+                <a href="/">
+                    <img src="/static/ambulenceLogo.png" height="40px" alt="Logo">
+                </a>
+            </div>
             <ul>
                 <a href="https://maps.app.goo.gl/hmQvw8DyJ4egEP3k8/">
                     <li>Map</li>
                 </a>
-                <a href="contact.html">
+                <a href="contact">
                     <li>Contact us</li>
                 </a>
-                <a href="about.html">
+                <a href="about">
                     <li>About us</li>
                 </a>
             </ul>
@@ -155,7 +159,7 @@
     </header>
     <section id="booking">
         <h2>Book an Ambulance</h2>
-        <form>
+        <form method="post" action="submitBooking" enctype="multipart/form-data">
             <label for="pickup">Pickup Location:</label>
             <input type="text" id="pickup" name="pickup" required>
 
