@@ -21,6 +21,7 @@ async def home(request: Request):
 @app.post("/submitBooking")
 async def submitBooking(pickup: str = Form(...), dropoff: str = Form(...),date: datetime.date=Form(...),time: datetime.time=Form(...)):
    print(pickup,"\n",dropoff,"\n",date,"\n",time)
+   
    return {"pickup": pickup,"dropoff":dropoff,"date":date,"time":time}
 
 
